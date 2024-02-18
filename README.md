@@ -2,4 +2,4 @@
 
 # Tutorial TBD
 
-[alt text](https://github.com/adrienn3/cozy_frog/blob/main/sample.png?raw=true)
+![alt text](https://raw.githubusercontent.com/adrienn3/cozy_frog/main/sample.png)
