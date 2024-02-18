@@ -7,31 +7,31 @@ SCREEN_HEIGHT = 800
 
 FLY_SPEED = 2
 
-background = pg.image.load('background.png')
+background = pg.image.load('images/background.png')
 background = pg.transform.scale(background, (SCREEN_WIDTH, SCREEN_HEIGHT))
 
-sprite_image = pg.image.load('cozy_frog.png')
+sprite_image = pg.image.load('images/cozy_frog.png')
 sprite_image = pg.transform.scale(sprite_image, (350, 350))
 sprite_rect = sprite_image.get_rect(center=(SCREEN_WIDTH / 2 + 250, SCREEN_HEIGHT / 2 + 150))
 
-fly_image = pg.image.load('fly.png')
+fly_image = pg.image.load('images/fly.png')
 fly_image = pg.transform.scale(fly_image, (150, 150))
 fly_image = pg.transform.rotate(fly_image, 180)
 fly_rect = fly_image.get_rect(center=(200, 100))
 
-tongue_image = pg.image.load('tongue.png')
+tongue_image = pg.image.load('images/tongue.png')
 tongue_image = pg.transform.scale(tongue_image, (100, 100))
 tongue_rect = tongue_image.get_rect(center=(500, 500))
 
-bullet_image_1 = pg.image.load('bullet.png')
+bullet_image_1 = pg.image.load('images/bullet.png')
 bullet_image_1 = pg.transform.scale(bullet_image_1, (75, 75))
 bullet_image_1 = pg.transform.rotate(bullet_image_1, 45)
 
-bullet_image_2 = pg.image.load('bullet.png')
+bullet_image_2 = pg.image.load('images/bullet.png')
 bullet_image_2 = pg.transform.scale(bullet_image_2, (75, 75))
 bullet_image_2 = pg.transform.rotate(bullet_image_2, 45)
 
-bullet_image_3 = pg.image.load('bullet.png')
+bullet_image_3 = pg.image.load('images/bullet.png')
 bullet_image_3 = pg.transform.scale(bullet_image_3, (75, 75))
 bullet_image_3 = pg.transform.rotate(bullet_image_3, 45)
 
@@ -40,7 +40,7 @@ bullet_image_list.append(bullet_image_1)
 bullet_image_list.append(bullet_image_2)
 bullet_image_list.append(bullet_image_3)
 
-explosion_image = pg.image.load('explosion.png')
+explosion_image = pg.image.load('images/explosion.png')
 explosion_image = pg.transform.scale(explosion_image, (200, 200))
 explosion_rect = explosion_image.get_rect()
 
@@ -74,7 +74,7 @@ hitbox_height = int(150 * hitbox_scale)
 # Initialize the score and font
 score = 0
 font_size = 36  # Adjust as needed
-font_path = "2P.ttf"
+font_path = "fonts/2P.ttf"
 
 pg.init()
 pg.mixer.init()
@@ -88,13 +88,13 @@ clock = pg.time.Clock()
 show_explosion = False
 explosion_counter = 0
 
-explosion_path = 'explosion.wav'
+explosion_path = 'sounds/explosion.wav'
 explosion = pg.mixer.Sound(explosion_path)
 
-shot_sound_path = 'shot.wav'
+shot_sound_path = 'sounds/shot.wav'
 shot_sound = pg.mixer.Sound(shot_sound_path)
 
-background_sound_path = "background.wav"  # Replace with your sound file's path
+background_sound_path = "sounds/background.wav"  # Replace with your sound file's path
 background_sound = pg.mixer.Sound(background_sound_path)
 background_sound.play(loops=-1)
 
@@ -191,7 +191,7 @@ while running:
         
     for i, t in enumerate(tongue_shots):
         if not t:
-            bullet_stock_image = pg.image.load('bullet.png')
+            bullet_stock_image = pg.image.load('images/bullet.png')
             bullet_stock_image = pg.transform.scale(bullet_stock_image, (100, 100))
             # bullet_stock_image = pg.transform.rotate(bullet_stock_image, -45)
             screen.blit(bullet_stock_image, (600+50*i, 700))
