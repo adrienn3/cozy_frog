@@ -1,6 +1,5 @@
 import pygame as pg
 import math
-import random
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 800
@@ -52,12 +51,12 @@ fly_wave_frequency = 0.05  # Frequency of the wave; adjust for faster or slower 
 fly_wave_phase = 0
 
 # Arc parameters
-arc_radius = 100  # Adjust as necessary for the desired arc size
-arc_angle_start = 270  # Starting angle in degrees
-arc_angle_end = 360  # Ending angle in degrees
-arc_angle_current = arc_angle_start  # Initialize current angle to the start angle
-arc_speed = 1  # Speed of movement along the arc, adjust as necessary
-moving_forward = True  # Track the direction of arc movement
+arc_radius = 100
+arc_angle_start = 270
+arc_angle_end = 360
+arc_angle_current = arc_angle_start
+arc_speed = 1  # Speed of movement along the arc
+moving_forward = True
 
 tongue_shot = None
 tongue_shot_alive = False
@@ -71,9 +70,8 @@ hitbox_scale = 0.2
 hitbox_width = int(150 * hitbox_scale)
 hitbox_height = int(150 * hitbox_scale)
 
-# Initialize the score and font
 score = 0
-font_size = 36  # Adjust as needed
+font_size = 36
 font_path = "fonts/2P.ttf"
 
 pg.init()
@@ -94,7 +92,7 @@ explosion = pg.mixer.Sound(explosion_path)
 shot_sound_path = 'sounds/shot.wav'
 shot_sound = pg.mixer.Sound(shot_sound_path)
 
-background_sound_path = "sounds/background.wav"  # Replace with your sound file's path
+background_sound_path = "sounds/background.wav"
 background_sound = pg.mixer.Sound(background_sound_path)
 background_sound.play(loops=-1)
 
@@ -132,13 +130,11 @@ while running:
         screen.blit(explosion_image, explosion_rect)
         explosion_counter += 1
     
-    # Calculate the new horizontal position using a sine wave for the oscillation
     fly_wave_phase += fly_wave_frequency
     fly_horizontal_movement = math.sin(fly_wave_phase) * fly_wave_amplitude
     
-    # Update the fly's position
     fly_rect.centerx = (SCREEN_WIDTH / 2)-200 + fly_horizontal_movement
-    fly_rect.centery += FLY_SPEED  # Continue moving down at a constant speed
+    fly_rect.centery += FLY_SPEED
     
     fly_hitbox = pg.Rect(
         fly_rect.centerx - hitbox_width // 2,
@@ -148,11 +144,10 @@ while running:
     )
     
     if fly_rect.top > SCREEN_HEIGHT:
-        fly_rect.top = -fly_rect.height  # Reset position to the top of the screen
+        fly_rect.top = -fly_rect.height
     else:
         fly_rect.move_ip(0, FLY_SPEED)
         
-    # Update tongue's position to follow an arc
     if moving_forward:
         if arc_angle_current <= arc_angle_end:
             angle_rad = math.radians(arc_angle_current)
@@ -161,9 +156,9 @@ while running:
             tongue_rect.center = (tongue_x, tongue_y)
             arc_angle_current += arc_speed
         else:
-            moving_forward = False  # Change direction
-            arc_angle_current -= arc_speed  # Start moving back immediately
-    else:  # Moving backward
+            moving_forward = False
+            arc_angle_current -= arc_speed
+    else:
         if arc_angle_current >= arc_angle_start:
             angle_rad = math.radians(arc_angle_current)
             tongue_x = sprite_rect.centerx - arc_radius * math.cos(angle_rad)
@@ -171,11 +166,9 @@ while running:
             tongue_rect.center = (tongue_x, tongue_y)
             arc_angle_current -= arc_speed
         else:
-            moving_forward = True  # Change direction
-            arc_angle_current += arc_speed  # Start moving forward immediately
+            moving_forward = True
+            arc_angle_current += arc_speed
     if any(tongue_shots):
-        # tongue_shot.move_ip(-tongue_shot_x_motion, -tongue_shot_y_motion)
-        # pg.draw.rect(screen, (255, 182, 193), tongue_shot)
         for i, tongue_shotty in enumerate(tongue_shots):
             if tongue_shotty:
                 tongue_shotty['x'] -= tongue_shot_x_motion
@@ -183,7 +176,7 @@ while running:
                 tongue_shotty['rect'].topleft = (tongue_shotty['x'], tongue_shotty['y'])
                 screen.blit(bullet_image_list[i], (tongue_shotty['x'], tongue_shotty['y']))
                 if tongue_shotty['y'] < -50:
-                    tongue_shots[i] = {}  # Clear the dictionary for reuse
+                    tongue_shots[i] = {}
                     tongue_shot_count -= 1
 
     if not any(tongue_shots):
@@ -193,29 +186,25 @@ while running:
         if not t:
             bullet_stock_image = pg.image.load('images/bullet.png')
             bullet_stock_image = pg.transform.scale(bullet_stock_image, (100, 100))
-            # bullet_stock_image = pg.transform.rotate(bullet_stock_image, -45)
             screen.blit(bullet_stock_image, (600+50*i, 700))
         
     for tongue_shot in tongue_shots:
-        if tongue_shot:  # Check if the dictionary is not empty
+        if tongue_shot:
             if tongue_shot['rect'].colliderect(fly_hitbox):
-                fly_rect.top = -fly_rect.height  # Reset position to the top of the screen
-                # Reset the bullet's state to make it "disappear"
+                fly_rect.top = -fly_rect.height
                 explosion_rect = explosion_image.get_rect(center=(tongue_shot['x'], tongue_shot['y']))
-                tongue_shot.clear()  # Clear the dictionary for this bullet
-                score += 1  # Increase score when the fly is hit
+                tongue_shot.clear()
+                score += 1
                 show_explosion = True
                 tongue_shot_count -= 1
-                explosion.play()
-                
-                break  # Exit the loop after the first collision
+                explosion.play()                
+                break
 
-    # font = pg.font.SysFont(None, font_size)
     font = pg.font.Font(font_path, font_size)
 
     score_text = f"Score: {score}"
-    text_surface = font.render(score_text, True, (255, 255, 255))  # White color
-    text_rect = text_surface.get_rect(topright=(SCREEN_WIDTH - 25, 25))  # Adjust positioning as needed
+    text_surface = font.render(score_text, True, (255, 255, 255))
+    text_rect = text_surface.get_rect(topright=(SCREEN_WIDTH - 25, 25))
     screen.blit(text_surface, text_rect)
 
     pg.display.update()
