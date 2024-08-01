@@ -1,0 +1,14 @@
+<%= turbo_frame_tag "pull_frame" do %>
+  <% if @item %>
+    <h1>YOU PULLED:</h1>
+    <h2><%= @item&.name %>, $<%= @item&.value_usd %>, <%= @item&.unique_identifier %>, <%= @item&.release_year %></h2>
+    <div class="image-container">
+      <%= image_tag(url_for(@item.image), size: "400") if @item.image.attached? %>
+    </div>
+    <div class="giveaway-section">
+      <%= link_to "PULL!" , pull_item_path , class: "button", id: "pull-button" %>
+    </div>
+  <% else %>
+    <h1><%= @error %></h1>
+  <% end %>
+<% end %>

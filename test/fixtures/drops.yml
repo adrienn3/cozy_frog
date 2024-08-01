@@ -1,0 +1,13 @@
+# == Schema Information
+#
+# Table name: drops
+#
+#  id         :bigint           not null, primary key
+#  end_time   :datetime         not null
+#  start_time :datetime         not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+drop1:
+  end_time: "2023-07-02 10:00:00"
+  start_time: "2023-07-01 10:00:00"

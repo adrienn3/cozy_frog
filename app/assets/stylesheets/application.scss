@@ -1,0 +1,390 @@
+/* Global Styles */
+
+@import 'font-awesome';
+@import "bootstrap";
+
+body {
+  font-family: "Roboto Light", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  color: #333;
+  margin-top: 40px;
+}
+
+button,
+.input-field {
+  font-size: 16px;
+  color: rgba(55, 125, 246, 1.0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Devise Login Page */
+
+.devise-login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 150px;
+}
+
+.devise-login-form h2 {
+  margin-bottom: 20px;
+}
+
+.devise-login-form .field {
+  margin-bottom: 15px;
+}
+
+.devise-login-form .field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.devise-login-form .field input[type="email"],
+.devise-login-form .field input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.devise-login-form .field .remember-me {
+  margin-top: 10px;
+}
+
+.devise-login-form .actions {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.devise-login-form .actions input[type="submit"] {
+  padding: 10px 20px;
+  background-color: rgba(55, 125, 246, 1.0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Signup Form */
+
+.signup-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.signup-form h2 {
+  margin-bottom: 20px;
+}
+
+.signup-form .field {
+  margin-bottom: 10px;
+}
+
+.signup-form label {
+  display: block;
+  font-weight: bold;
+}
+
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.signup-form .actions {
+  margin-top: 20px;
+}
+
+.signup-form .actions input[type="submit"] {
+  background-color: rgba(55, 125, 246, 1.0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup-form .actions input[type="submit"]:hover {
+  background-color: rgba(55, 125, 246, 1.0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Sections */
+
+.giveaway-section,
+.middle-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.giveaway-section h1,
+.middle-section h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.giveaway-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.home-page-section {
+  text-align: right;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.home-page-section h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.home-page-section .auth-links {
+  margin-top: 20px;
+}
+
+.home-page-section .auth-links a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 16px;
+  background-color: rgba(55, 125, 246, 1.0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.home-page-section .auth-links a:hover {
+  background-color: rgba(55, 125, 246, 1.0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.giveaway-section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.giveaway-section button {
+  background-color: rgba(55, 125, 246, 1.0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 0.5rem; /* Increase the padding to make the navbar bigger */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  margin-left: 20px;
+}
+
+.navbar-brand a {
+  font-family: "Roboto Light", sans-serif;
+  font-weight: bold;
+  font-size: 22px; /* Increase the font size to make the text bigger */
+  color: #333;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.navbar-menu {
+  font-size: 1rem;
+  margin-left: auto;
+}
+
+.navbar-item {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 18px;
+  margin-right: 2rem;
+}
+
+.navbar-item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.navbar-item:hover {
+  color: #666;
+}
+
+/* Utility Classes */
+
+.title {
+  float: left;
+  margin-left: 50px;
+}
+
+.row-container {
+  overflow: hidden;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(55, 125, 246, 1.0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(55, 125, 246, 1.0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  background-color: rgba(55, 125, 246, 1.0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.shadow-container {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  box-shadow: 0 0 200px 150px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.z-top {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+#countdown {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 80px;
+  background-color: #f7f7f7;
+  flex-shrink: 0;
+  height: 100%;
+  position: absolute;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+}
+
+.sidebar a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: "Roboto Light", sans-serif;
+}
+
+/* CSS styles */
+.icon-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.banner {
+  background-color: rgb(64, 216, 158);
+  padding: 20px;
+  display: table;
+  width: 100%;
+}
+
+.banner h1 {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  font-family: "Roboto Light", sans-serif;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.dollar-amount {
+  color: rgba(55, 125, 246, 1.0);
+  text-decoration:none;
+  pointer-events: none;
+}

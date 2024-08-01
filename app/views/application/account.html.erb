@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <%= render 'shared/top_navbar' %>
+    <%= render 'shared/sidebar' %>
+    <h1>Account</h1>
+    <h3>User:</h3>
+    <div class='middle-section'>
+      <h3><%= current_user.email %></h3>
+    </div>
+    <h3>Account Balance:</h3>
+    <div class='middle-section'>
+      <h3>$<%= current_user.account_balance %> USD</h3>
+    </div>
+    <h3>Transactions:</h3>
+    <div class='middle-section'>
+      <ul>
+        <% current_user.transactions.each do |transaction| %>
+          <li><%= "#{transaction.created_at}, #{transaction.amount_usd}, #{transaction.drop_item}" %></li>
+        <% end %>
+      </ul>
+    </div>
+  </body>
+</html>

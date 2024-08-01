@@ -1,0 +1,125 @@
+item1_picture:
+  name: image
+  record: item1 (Item)
+  blob: item1_picture_blob
+
+item2_picture:
+  name: image
+  record: item2 (Item)
+  blob: item2_picture_blob
+
+item3_picture:
+  name: image
+  record: item3 (Item)
+  blob: item3_picture_blob
+
+item4_picture:
+  name: image
+  record: item4 (Item)
+  blob: item4_picture_blob
+
+
+item5_picture:
+  name: image
+  record: item5 (Item)
+  blob: item5_picture_blob
+
+item6_picture:
+  name: image
+  record: item6 (Item)
+  blob: item6_picture_blob
+
+item7_picture:
+  name: image
+  record: item7 (Item)
+  blob: item7_picture_blob
+
+item8_picture:
+  name: image
+  record: item8 (Item)
+  blob: item8_picture_blob
+
+item9_picture:
+  name: image
+  record: item9 (Item)
+  blob: item9_picture_blob
+
+item10_picture:
+  name: image
+  record: item10 (Item)
+  blob: item10_picture_blob
+
+item11_picture:
+  name: image
+  record: item11 (Item)
+  blob: item11_picture_blob
+
+item12_picture:
+  name: image
+  record: item12 (Item)
+  blob: item12_picture_blob
+
+item13_picture:
+  name: image
+  record: item13 (Item)
+  blob: item13_picture_blob
+
+item14_picture:
+  name: image
+  record: item14 (Item)
+  blob: item14_picture_blob
+
+item15_picture:
+  name: image
+  record: item15 (Item)
+  blob: item15_picture_blob
+
+item16_picture:
+  name: image
+  record: item16 (Item)
+  blob: item16_picture_blob
+
+item17_picture:
+  name: image
+  record: item17 (Item)
+  blob: item17_picture_blob
+
+item18_picture:
+  name: image
+  record: item18 (Item)
+  blob: item18_picture_blob
+
+item19_picture:
+  name: image
+  record: item19 (Item)
+  blob: item19_picture_blob
+
+item20_picture:
+  name: image
+  record: item20 (Item)
+  blob: item20_picture_blob
+
+item21_picture:
+  name: image
+  record: item21 (Item)
+  blob: item21_picture_blob
+
+item22_picture:
+  name: image
+  record: item22 (Item)
+  blob: item22_picture_blob
+
+item23_picture:
+  name: image
+  record: item23 (Item)
+  blob: item23_picture_blob
+
+item24_picture:
+  name: image
+  record: item24 (Item)
+  blob: item24_picture_blob
+
+item25_picture:
+  name: image
+  record: item25 (Item)
+  blob: item25_picture_blob

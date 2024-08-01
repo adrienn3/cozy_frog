@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <%= render 'shared/top_navbar' %>
+    <%= render 'shared/sidebar' %>
+    <h1>Inventory</h1>
+    <div class='middle-section'>
+      <ul>
+        <% DropItem.all.each do |item| %>
+          <li><%= item.item.name %></li>
+          <%= image_tag(url_for(item.item.image), size: "400") if item.item.image.attached? %>
+        <% end %>
+      </ul>
+    </div>
+  </body>
+</html>

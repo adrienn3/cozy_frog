@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <%= render 'shared/top_navbar' %>
+    <%= render 'shared/sidebar' %>
+    <div class="content">
+      <div class="home-page-section"></div>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="image-container">
+              <%= image_tag('photo.png', alt: 'Description of the image' , size: '400x400' ) %>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="giveaway-section">
+          <a href=<%= pull_path%>><button class="btn btn-xl btn-primary">Play Now</button></a>
+        </div>
+      </div>
+    </body>
+  </html>

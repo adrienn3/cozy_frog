@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: items
+#
+#  id                :bigint           not null, primary key
+#  name              :string(255)      default("item_placeholder"), not null
+#  release_year      :integer
+#  unique_identifier :string(255)
+#  value_usd         :decimal(10, )    default(0), not null
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
+# items.yml
+
+<% (1..25).each do |n| %>
+  item<%= n %>:
+    name: "Item <%= n %>"
+    release_year: <%= 2010 + n %>
+    unique_identifier: "<%= ('A'..'Z').to_a.sample(3).join + n.to_s.rjust(3, '0') %>"
+    value_usd: <%= rand(1..100) + rand.round(2) %>
+<% end %>

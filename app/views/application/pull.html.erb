@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <%= render 'shared/top_navbar' %>
+    <%= render 'shared/sidebar' %>
+    <div class="content">
+      <div class="home-page-section"></div>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="image-container">
+              <%= turbo_frame_tag "pull_frame" do %>
+              <div class="image-container">
+                <%= image_tag('photo.png', alt: 'Description of the image' , size: '400x400' ) %>
+              </div>
+              <!-- <div class="giveaway-section">
+                <%= link_to "PULL!" , pull_item_path , class: "button", id: "pull-button" %>
+              </div> -->
+              <div class="giveaway-section">
+                <%= link_to "Buy 1" , purchase_item_path , class: "button", id: "purchase-button" %>
+              </div>
+            <% end %>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </body>
+  </html>

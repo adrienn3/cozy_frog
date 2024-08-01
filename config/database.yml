@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  username: "root"
+  password:
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: misery_development
+
+test:
+  <<: *default
+  database: misery_test
+
+production:
+  <<: *default
+  database: misery_production

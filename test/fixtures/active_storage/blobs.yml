@@ -1,0 +1,74 @@
+item1_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "1.png", service_name: "test_fixtures" %>
+
+item2_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "2.png", service_name: "test_fixtures" %>
+
+item3_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "3.png", service_name: "test_fixtures" %>
+
+item4_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "4.png", service_name: "test_fixtures" %>
+
+item5_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "5.png", service_name: "test_fixtures" %>
+
+item6_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "6.png", service_name: "test_fixtures" %>
+
+item7_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "7.png", service_name: "test_fixtures" %>
+
+item8_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "8.png", service_name: "test_fixtures" %>
+
+item9_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "9.png", service_name: "test_fixtures" %>
+
+item10_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "10.png", service_name: "test_fixtures" %>
+
+item11_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "11.png", service_name: "test_fixtures" %>
+
+item12_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "12.png", service_name: "test_fixtures" %>
+
+item13_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "13.png", service_name: "test_fixtures" %>
+
+item14_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "14.png", service_name: "test_fixtures" %>
+
+item15_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "15.png", service_name: "test_fixtures" %>
+
+item16_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "16.png", service_name: "test_fixtures" %>
+
+item17_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "17.png", service_name: "test_fixtures" %>
+
+item18_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "18.png", service_name: "test_fixtures" %>
+
+item19_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "19.png", service_name: "test_fixtures" %>
+
+item20_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "20.png", service_name: "test_fixtures" %>
+
+item21_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "21.png", service_name: "test_fixtures" %>
+
+item22_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "22.png", service_name: "test_fixtures" %>
+
+item23_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "23.png", service_name: "test_fixtures" %>
+
+item24_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "24.png", service_name: "test_fixtures" %>
+
+item25_picture_blob: 
+  <%= ActiveStorage::FixtureSet.blob filename: "25.png", service_name: "test_fixtures" %>
